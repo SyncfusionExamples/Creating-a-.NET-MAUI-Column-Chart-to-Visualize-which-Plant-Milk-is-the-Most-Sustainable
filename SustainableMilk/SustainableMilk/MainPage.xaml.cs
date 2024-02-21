@@ -23,8 +23,10 @@ namespace SustainableMilk
     {
         protected override void Draw(ICanvas canvas)
         {
-#if ANDROID || IOS
             var path = new PathF();
+
+#if ANDROID || IOS
+
             path.MoveTo(Left + 20, Bottom);
             path.LineTo(Right - 20, Bottom);
             path.LineTo(Right - 20, Top + 10);
@@ -37,7 +39,6 @@ namespace SustainableMilk
 
 #elif WINDOWS || MACCATALYST
 
-            var path = new PathF();
             path.MoveTo(Left + 10, Bottom);
             path.LineTo(Right - 10, Bottom);
             path.LineTo(Right - 10, Top + 30);
