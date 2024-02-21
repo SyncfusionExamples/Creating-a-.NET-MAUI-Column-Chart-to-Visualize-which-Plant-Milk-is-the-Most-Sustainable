@@ -66,7 +66,7 @@
                 </chart:ColumnSeries.DataLabelSettings>
 
                 <chart:ColumnSeries.SelectionBehavior>
-                    <chart:DataPointSelectionBehavior SelectionBrush="#4000AEE0" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"/>
+                    <chart:DataPointSelectionBehavior SelectionBrush="#4000AEE0" Type="SingleDeselect" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"/>
                 </chart:ColumnSeries.SelectionBehavior>
             </model:ColumnSeriesExt>
 
