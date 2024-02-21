@@ -72,7 +72,7 @@
 
             <chart:SfCartesianChart.PlotAreaBackgroundView>
                 <AbsoluteLayout>
-                    <Label AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.94,0.05,-1,-1',iOS='0.92,0.05,-1,-1',WinUI='0.95,0.05,-1,-1',MacCatalyst='0.95,0.05,-1,-1'}" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                    <Label AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.94,0.05,-1,-1',iOS='0.92,0.05,-1,-1',WinUI='0.95,0.05,-1,-1',MacCatalyst='0.96,0.05,-1,-1'}" AbsoluteLayout.LayoutFlags="PositionProportional" 
                            Text="CO₂ Emission (in kg)" FontSize="16" HorizontalOptions="Center" FontFamily="AntaRegular"/>
 
                     <Border AbsoluteLayout.LayoutBounds="{OnPlatform Android='1,0.15,-1,-1', iOS='1,0.15,-1,-1', Default='1,0.08,-1,-1'}" AbsoluteLayout.LayoutFlags="PositionProportional"
