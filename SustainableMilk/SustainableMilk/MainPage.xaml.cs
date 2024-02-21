@@ -35,7 +35,7 @@ namespace SustainableMilk
             path.LineTo(Left + 20, Top + 10);
             path.Close();
 
-#elif WINDOWS || MAC
+#elif WINDOWS || MACCATALYST
 
             var path = new PathF();
             path.MoveTo(Left + 10, Bottom);
