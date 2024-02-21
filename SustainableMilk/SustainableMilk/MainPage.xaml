@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:SustainableMilk"
+             x:Class="SustainableMilk.MainPage">
+
+    <ContentPage.BindingContext>
+        <model:MilkPlantData/>
+    </ContentPage.BindingContext>
+
+    <Border Stroke="#031257" Padding="{OnPlatform Default=10, Android=7,iOS=7}" StrokeShape="RoundRectangle 10" Margin="25" StrokeThickness="1.5">
+
+        <chart:SfCartesianChart>
+            
+            <chart:SfCartesianChart.Title>
+                <Label Text="Which (Plant) Milk Is the Most Sustainable?" HorizontalOptions="Center"
+                       FontSize="20" FontFamily="AntaRegular" TextColor="Black"/>
+            </chart:SfCartesianChart.Title>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis ShowMajorGridLines="False">
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle FontFamily="AntaRegular" TextColor="Black" FontSize="14"/>
+                    </chart:CategoryAxis.LabelStyle>
+
+                    <chart:CategoryAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth ="0"/>
+                    </chart:CategoryAxis.AxisLineStyle>
+
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle StrokeWidth ="0"/>
+                    </chart:CategoryAxis.MajorTickStyle>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis ShowMajorGridLines="False" Maximum="700">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Water use (liters)" FontSize="20" TextColor="Black" FontFamily="AntaRegular" Margin="0,-50,0,0"/>
+                    </chart:NumericalAxis.Title>
+
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="Transparent"/>
+                    </chart:NumericalAxis.LabelStyle>
+
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth ="0"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+
+                    <chart:NumericalAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle StrokeWidth ="0"/>
+                    </chart:NumericalAxis.MajorTickStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <model:ColumnSeriesExt ItemsSource="{Binding Data}" XBindingPath="Plant" YBindingPath="WaterQuantity"
+                    Fill="#00AEE0" ShowDataLabels="True">
+
+                <chart:ColumnSeries.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings LabelPlacement="Outer" UseSeriesPalette="False">
+                        <chart:CartesianDataLabelSettings.LabelStyle>
+                            <chart:ChartDataLabelStyle FontSize="14" FontFamily="AntaRegular" TextColor="Black"/>
+                        </chart:CartesianDataLabelSettings.LabelStyle>
+                    </chart:CartesianDataLabelSettings>
+                </chart:ColumnSeries.DataLabelSettings>
+
+                <chart:ColumnSeries.SelectionBehavior>
+                    <chart:DataPointSelectionBehavior SelectionBrush="#4000AEE0" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"/>
+                </chart:ColumnSeries.SelectionBehavior>
+            </model:ColumnSeriesExt>
+
+            <chart:SfCartesianChart.PlotAreaBackgroundView>
+                <AbsoluteLayout>
+                    <Label AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.94,0.05,-1,-1',iOS='0.94,0.05,-1,-1',WinUI='0.95,0.05,-1,-1',MacCatalyst='0.97,0.05,-1,-1'}" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                           Text="CO₂ Emission (in kg)" FontSize="16" HorizontalOptions="Center" FontFamily="AntaRegular"/>
+
+                    <Border AbsoluteLayout.LayoutBounds="{OnPlatform Android='1,0.15,-1,-1', iOS='1,0.15,-1,-1', Default='1,0.08,-1,-1'}" AbsoluteLayout.LayoutFlags="PositionProportional"
+                            Stroke="#031257" Background="#0D00AEE0" Padding="{OnPlatform Android=7,iOS=7,Default=10}" StrokeShape="RoundRectangle 10"
+                            Margin="25" StrokeThickness="1.5">
+                        <Grid WidthRequest="{OnPlatform Android=165,iOS=165,Default=200}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Row="1" Grid.Column="0" Source="{Binding PlantImage}" Margin="10,0,0,0" HeightRequest="{OnPlatform Android=60,iOS=60, Default=80}" WidthRequest="{OnPlatform Android=60,iOS=60, Default=80}"/>
+                            <Image Grid.Row="1" Grid.Column="1" Source="right.png" Margin="15,0,0,0" HeightRequest="60" WidthRequest="40" VerticalOptions="Center"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding EmissionText}" FontFamily="AntaRegular" FontSize="18" Margin="-20,0,-25,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </AbsoluteLayout>
+            </chart:SfCartesianChart.PlotAreaBackgroundView>
+
+        </chart:SfCartesianChart>
+    </Border>
+</ContentPage>
