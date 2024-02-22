@@ -71,6 +71,7 @@ namespace SustainableMilk
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         private void UpdateCountryAndCount()
         {
             if (SelectedIndex >= 0 && SelectedIndex < Data?.Count)
