@@ -14,7 +14,7 @@ In this example, we will explore the details of the most sustainable milk using 
 
 Various plant-based milks, including soy, rice, oat, and almond, are now widely accessible, no longer confined to specialty stores. Many are making the switch from dairy to these alternatives due to concerns about animal welfare and climate. But which is the most environmentally friendly? And how do they compare nutritionally to dairy milk? The consensus is that non-dairy milks generally surpass cow’s milk in terms of carbon emissions, land use, and water consumption.
 
-![GifDemo](https://github.com/SyncfusionExamples/Creating-a-.NET-MAUI-Column-Chart-to-Visualize-which-Plant-Milk-is-the-Most-Sustainable/assets/103025761/9e3123d8-3e8c-46e4-8edc-85fe441847b2)
+![GifDemo](https://github.com/SyncfusionExamples/Creating-a-.NET-MAUI-Column-Chart-to-Visualize-which-Plant-Milk-is-the-Most-Sustainable/assets/103025761/52361baf-92fe-45c3-bc5b-92c8aa78809e)
 
 
 ## Troubleshooting:
