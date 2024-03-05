@@ -26,8 +26,8 @@
                         </Grid.ColumnDefinitions>
                         <StackLayout Grid.RowSpan="2" Margin="0,5,0,0" Orientation="Vertical" BackgroundColor="#9BD241" />
                         <StackLayout Grid.Column="1" Margin="5,0,0,0" HorizontalOptions="Start" Orientation="Vertical">
-                            <Label Text="Which (Plant) Milk Is the Most Sustainable?" FontSize="Large" FontAttributes="Bold" TextColor="#666666" FontFamily="AntaRegular"/>
-                            <Label Text="Exploring Environmental Impact and Ethical Considerations" FontSize="17" TextColor="Gray" Margin="0,2,0,0" FontFamily="AntaRegular"/>
+                            <Label Text="Which Milk Is the Most Sustainable?" FontSize="Large" FontAttributes="Bold" TextColor="#666666" FontFamily="AntaRegular"/>
+                            <Label Text="Based on quantity of water used and CO₂ emitted per litre of milk" FontSize="17" TextColor="Gray" Margin="0,2,0,0" FontFamily="AntaRegular"/>
                         </StackLayout>
                     </Grid>
                     
