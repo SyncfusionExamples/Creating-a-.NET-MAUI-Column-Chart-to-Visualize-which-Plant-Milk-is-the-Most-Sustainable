@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace SustainableMilk
 {
-    public class MilkPlantModel
+    public class MilkSourceModel
     {
-        public string Plant { get; set; }
+        public string Source { get; set; }
         public double WaterQuantity  { get; set; }
         public double CO2Emission  { get; set; }
 
-        public MilkPlantModel(string plant, double waterQuantity, double cO2Emission)
+        public MilkSourceModel(string source, double waterQuantity, double cO2Emission)
         {
-            Plant = plant;
+            Source = source;
             WaterQuantity = waterQuantity;
             CO2Emission = cO2Emission;
         }

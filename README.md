@@ -14,11 +14,12 @@ In this example, we will explore the details of the most sustainable milk using 
 
 Various plant-based milks, including soy, rice, oat, and almond, are now widely accessible, no longer confined to specialty stores. Many are making the switch from dairy to these alternatives due to concerns about animal welfare and climate. But which is the most environmentally friendly? And how do they compare nutritionally to dairy milk? The consensus is that non-dairy milks generally surpass cow’s milk in terms of carbon emissions, land use, and water consumption.
 
-![GifDemo](https://github.com/SyncfusionExamples/Creating-a-.NET-MAUI-Column-Chart-to-Visualize-which-Plant-Milk-is-the-Most-Sustainable/assets/103025761/52361baf-92fe-45c3-bc5b-92c8aa78809e)
+![Demo-Gif](https://github.com/SyncfusionExamples/Creating-a-.NET-MAUI-Column-Chart-to-Visualize-which-Plant-Milk-is-the-Most-Sustainable/assets/103025761/9f9815b1-2dba-46fd-893e-4a8c32e42139)
+
 
 
 ## Troubleshooting:
 ### Path too long exception:
 If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. 
 
-For a step-by-step procedure, refer to the [Most Sustainable Milk Blog](https://www.syncfusion.com/maui-controls/maui-cartesian-charts/chart-types/maui-column-chart).
+For a step-by-step procedure, refer to the [Most Sustainable Milk Blog](https://www.syncfusion.com/blogs/post/maui-columnchart-sustainable-milk.aspx).

@@ -6,7 +6,7 @@
              x:Class="SustainableMilk.MainPage">
 
     <ContentPage.BindingContext>
-        <model:MilkPlantData />
+        <model:MilkSourceData />
     </ContentPage.BindingContext>
 
     <Border Stroke="#293b0b" Padding="{OnPlatform Default=10, Android=7,iOS=7}" StrokeShape="RoundRectangle 10" Margin="25" StrokeThickness="1.5">
@@ -26,8 +26,8 @@
                         </Grid.ColumnDefinitions>
                         <StackLayout Grid.RowSpan="2" Margin="0,5,0,0" Orientation="Vertical" BackgroundColor="#9BD241" />
                         <StackLayout Grid.Column="1" Margin="5,0,0,0" HorizontalOptions="Start" Orientation="Vertical">
-                            <Label Text="Which (Plant) Milk Is the Most Sustainable?" FontSize="Large" FontAttributes="Bold" TextColor="#666666" FontFamily="AntaRegular"/>
-                            <Label Text="Exploring Environmental Impact and Ethical Considerations" FontSize="17" TextColor="Gray" Margin="0,2,0,0" FontFamily="AntaRegular"/>
+                            <Label Text="Which Milk Is the Most Sustainable?" FontSize="Large" FontAttributes="Bold" TextColor="#666666" FontFamily="AntaRegular"/>
+                            <Label Text="Based on quantity of water used and CO₂ emitted per liter of milk" FontSize="17" TextColor="Gray" Margin="0,2,0,0" FontFamily="AntaRegular"/>
                         </StackLayout>
                     </Grid>
                     
@@ -41,7 +41,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Image Grid.Row="1" Grid.Column="0" Source="{Binding PlantImage}" Margin="10,0,0,0" HeightRequest="{OnPlatform Android=50,iOS=50, Default=50}"
+                            <Image Grid.Row="1" Grid.Column="0" Source="{Binding SourceImage}" Margin="10,0,0,0" HeightRequest="{OnPlatform Android=50,iOS=50, Default=50}"
                                        WidthRequest="{OnPlatform Android=50,iOS=50, Default=50}"/>
                             <Image Grid.Row="1" Grid.Column="1" Source="right.png" Margin="15,0,0,0" HeightRequest="50" WidthRequest="40" VerticalOptions="Center"/>
                             <Label Grid.Row="1" Grid.Column="2" Text="{Binding EmissionText}" FontFamily="AntaRegular" FontSize="18" Margin="-20,0,-25,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
@@ -87,7 +87,7 @@
                 </chart:NumericalAxis>
             </chart:SfCartesianChart.YAxes>
 
-            <model:ColumnSeriesExt ItemsSource="{Binding Data}" XBindingPath="Plant" YBindingPath="WaterQuantity"
+            <model:ColumnSeriesExt ItemsSource="{Binding Data}" XBindingPath="Source" YBindingPath="WaterQuantity"
                     Fill="#B8D86D" ShowDataLabels="True">
 
                 <chart:ColumnSeries.DataLabelSettings>

@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace SustainableMilk
 {
-    public class MilkPlantData : INotifyPropertyChanged
+    public class MilkSourceData : INotifyPropertyChanged
     {
-        public List<MilkPlantModel> Data { get; set; }
+        public List<MilkSourceModel> Data { get; set; }
 
-        private string plantImage = "";
-        public string PlantImage
+        private string sourceImage = "";
+        public string SourceImage
         {
-            get { return plantImage; }
+            get { return sourceImage; }
             set
             {
-                if (plantImage != value)
+                if (sourceImage != value)
                 {
-                    plantImage = value;
-                    OnPropertyChanged(nameof(PlantImage));
+                    sourceImage = value;
+                    OnPropertyChanged(nameof(sourceImage));
                 }
             }
         }
@@ -52,15 +52,15 @@ namespace SustainableMilk
             }
         }
 
-        public MilkPlantData()
+        public MilkSourceData()
         {
-            Data = new List<MilkPlantModel>
+            Data = new List<MilkSourceModel>
             {
-                new MilkPlantModel("Cow", 628, 3.2),
-                new MilkPlantModel("Almond", 371, 0.7),
-                new MilkPlantModel("Rice", 270, 1.2),
-                new MilkPlantModel("Oat", 48, 0.9),
-                new MilkPlantModel("Soy", 28, 1.0),
+                new MilkSourceModel("Cow", 628, 3.2),
+                new MilkSourceModel("Almond", 371, 0.7),
+                new MilkSourceModel("Rice", 270, 1.2),
+                new MilkSourceModel("Oat", 48, 0.9),
+                new MilkSourceModel("Soy", 28, 1.0),
             };
 
             SelectedIndex = 1;
@@ -76,7 +76,7 @@ namespace SustainableMilk
         {
             if (SelectedIndex >= 0 && SelectedIndex < Data?.Count)
             {
-                PlantImage = Data[SelectedIndex].Plant.ToLower() + ".png";
+                SourceImage = Data[SelectedIndex].Source.ToLower() + ".png";
                 EmissionText = Data[SelectedIndex].CO2Emission.ToString();
             }
         }
