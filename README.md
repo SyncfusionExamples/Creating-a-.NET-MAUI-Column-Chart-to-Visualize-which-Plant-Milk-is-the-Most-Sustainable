@@ -22,4 +22,4 @@ Various plant-based milks, including soy, rice, oat, and almond, are now widely 
 ### Path too long exception:
 If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. 
 
-For a step-by-step procedure, refer to the [Most Sustainable Milk Blog](https://www.syncfusion.com/maui-controls/maui-cartesian-charts/chart-types/maui-column-chart).
+For a step-by-step procedure, refer to the [Most Sustainable Milk Blog](https://www.syncfusion.com/blogs/post/maui-columnchart-sustainable-milk.aspx).
